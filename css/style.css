@@ -1,0 +1,917 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Exo', sans-serif;
+}
+
+img{
+    width: 100%;
+    margin-inline: auto;   
+    display: block;
+}
+
+.container{
+    width: 80%;
+    margin-inline: auto;  
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+span,
+a {
+    display: inline-block;
+}
+
+body{
+    margin: 0;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+ /* <!-- start  hero section --> */
+ #hero-section{
+     background-color: #FFF085;
+     border-bottom: black 5px solid;
+ }
+ #hero-section .container{
+    display: flex;
+      padding-top: 100px;
+      background-color: #FFF085;
+ }
+ #hero-section .container .child1,
+  #hero-section .container .child2{
+    width: 50%;
+  }
+
+    
+   #hero-section .container .child1 .trending span{
+     box-shadow: 5px 5px 0px black;
+   }
+/* ================================= child1 */
+   #hero-section .container .child1 h1 {
+    text-shadow: 2px 2px 0px #33301B;
+    font-size: 60px;
+    font-weight: 800;
+}
+
+
+   #hero-section .container .child1 .trending span{
+    color: white;
+    background-color: black;
+    width: fit-content;
+    height: 50px;
+    padding: 15px;
+    font-size: 15px;
+     transform: rotate(-5deg);
+   }
+
+   #hero-section .container .child1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+ #hero-section .container .child1 .text2 {
+    color: #E7000B;
+ }
+ #hero-section .container .child1 .text3 {
+    color: #155DFC;
+ }
+
+ #hero-section .container .child1 .content{
+    background-color: white;
+    box-shadow: 5px 5px 0px black;
+    border: black 2px solid;
+ }
+
+  #hero-section .container .child1 .content h5{
+    font-size: 25px;
+    font-weight: 400;
+    padding: 20px 20px;
+  }
+
+/* =======================================btn*/
+#hero-section .container .child1 .btn{
+    display: flex;
+    gap: 30px;
+    padding: 20px 20px;
+
+     position: relative;
+     z-index: 1;
+}  
+
+#hero-section .container .child1 .btn button img{
+    margin: 0;
+   width: 20px;
+}
+
+#hero-section .container .child1 .btn button{
+     position: relative;
+     z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: 300px;
+    height: 70px;
+    border: black 2px solid;
+    cursor: pointer;
+    transition: transform 0.2s;
+ 
+}
+
+#hero-section .container .child1 .btn button::before{
+      content: "";
+
+    position: absolute;
+
+    left: 5px;
+    top: 5px;
+
+    width: 100%;
+    height: 100%;
+    background-color: black;
+
+    z-index: -1;
+}
+#hero-section .container .child1 .btn button:hover{
+    transform: translate(5px, 5px);
+}
+
+/*===================================== reading Button */
+#hero-section .container .child1 .btn .reading{
+    color: white;
+    background-color: black;
+    font-size: 22px;
+}
+
+/*========================================== Intro Button */
+#hero-section .container .child1 .btn .intro{
+    color: black;
+    background-color: white;
+    font-size: 22px;
+}
+
+/* ========================================child2 */
+#hero-section .container .child2{
+    display: flex;
+ /* position: relative; */
+}
+
+#hero-section .container .child2 .img1{
+     position: relative;
+     top: 100px;
+
+}
+
+#hero-section .container .child2 img{
+   width: 60%;
+    border: 5px solid black;
+    box-shadow: 10px 10px 0 black;
+
+   transition: transform 0.3s;
+    transform: rotate(5deg);
+}
+
+#hero-section .container .child2 img:hover{
+    transform: translate(-5px, -5px);
+}
+#hero-section .container .child2 .box{
+    width: fit-content;
+    background-color: #FB2C36;
+    color: white;
+    border: black 2px solid;
+    box-shadow: 3px 3px 0 black ;
+    font-weight: 600;
+    padding: 5px 5px;
+
+    position: absolute;
+    top: -2%;
+    right: 12%;
+
+    transform: rotate(8deg);
+}
+
+  /* <!-- start  hero section -->
+
+  /*  =================start navbar================== - */
+  
+    .navbar{
+        position: fixed;
+        top: 0px;
+        z-index: 10000;
+        padding-top: 10px;
+    }
+
+    #hero-section{
+        padding-top: 20px;
+    }
+  
+  .navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: auto; */
+
+    background-color: #FFFFFF;
+    border: black 2px solid;
+    border-radius: 25px;
+
+    padding: 5px 10px;
+  }
+
+  .navbar .container .logo{
+    padding-right: 20px;
+  }
+
+.navbar .container .logo a{
+        font-size: 25px;
+        font-weight: bold;
+ }
+ 
+
+ .navbar .container .logo span{
+    color: #FF6900;
+ }
+/*  <!-- ====================Menu items --> */
+  .navbar .container .menu{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+     margin: 0;
+    padding: 0;
+  }
+    
+.navbar .container .menu li{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: fit-content;
+
+}
+  .navbar .container .menu a{
+    font-size: 15px;
+    transition: color 0.3s;
+     
+  }
+
+  .navbar .container .menu li a:hover{
+    color: #FF8050;
+  }
+ .navbar .container .menu img{
+    width: 5%;
+    color: #D1D5DC;
+    
+ }
+
+  .navbar .container  button{
+    width: fit-content;
+    border-radius: 25px;
+    border: black 2px solid; 
+    background-color: #FFD15B;
+    padding-left: 50px;
+    text-align: center;
+
+    transition: transform 0.3s;
+  }
+  .navbar .container  button:hover{
+    transform: translate(3px, 3px);
+  }
+
+
+
+
+/*  open & close icon */
+
+@media screen and (max-width: 768px) {
+
+    /* Hide normal menu */
+    .menu {
+        display: none;
+    }
+
+    /* Show menu icon */
+    .menu-icon {
+        display: block;
+        font-size: 25px;
+    }
+
+    /* Hide close icon initially */
+    .close-menu {
+        display: none;
+    }
+
+/*  open & close icon */
+/* =================open menu */
+    .menu:target {
+        display: flex;
+        flex-direction: column;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        padding: 20px;
+
+        background-color: #000;
+    }
+
+    /* =========================
+       Change ☰ to ✕
+    ========================= */
+
+    .navbar:has(.menu:target) .menu-icon {
+        display: none;
+    }
+
+    .navbar:has(.menu:target) .close-menu {
+        display: block;
+    }
+}
+
+
+  /*  =================end navbar================== - */
+
+  /* =================start LATEST ARTICLES================== */
+
+ #latest-articles .container{
+    padding-block: 50px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+
+
+ }
+ #latest-articles .container .parent1{
+    width: 66.6%;
+ 
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+ }
+
+#latest-articles .container .parent1 h2{
+    font-size: 50px;
+    font-weight: 800;
+ }
+
+ #latest-articles .container .parent1 .header{
+    display: flex;
+    align-items: center;
+    gap: 150px;
+
+ }
+
+
+#latest-articles .container .parent1 .fresh{
+    color: white;
+    background-color: black;
+    width: fit-content;
+    height: 50px;
+    padding: 15px;
+    font-size: 15px;
+    box-shadow: 5px 5px 0 black;
+     transform: rotate(3deg);
+  }
+
+
+ /*========================= card1===================  */
+
+   #latest-articles .container .parent1 .card1{
+    display: flex;
+    align-items: flex-start ;
+    padding: 20px;
+    gap: 5px;
+    border: #000 3px solid;
+    box-shadow: 5px 5px 0 black;
+
+      transition: transform 0.3s ease;
+  }
+
+#latest-articles .container .parent1 .card1:hover{
+    transform: translate(-5px, -5px);
+}
+
+#latest-articles .container .parent1 .card1:hover h3{
+    color: #E7000B;
+}
+
+#latest-articles .container .parent1 .card1 h3{
+    color: black;
+    transition: color 0.3s ease;
+}
+
+    /*========================= child1===================  */
+
+        #latest-articles .container .parent1 .card1 .child1{
+        width: 40%;
+        position: relative;
+    } 
+
+    
+   #latest-articles .container .parent1 .card1 .child1 img{
+    width: 100%;
+    display: block;
+    border: black 1px solid;
+   }
+
+    #latest-articles .container .parent1 .card1 .child1 .user{
+        position: relative;
+        
+    }
+
+   #latest-articles .container .parent1 .card1 .child1 span{
+    color: white;
+    background-color: #FB2C36;
+    border: black 2px solid;
+    position: absolute;
+        top: -10px;
+        right: -10px;
+         transform: rotate(5deg);
+         padding: 5px 5px;
+   }
+
+
+/* ==========================================child2 */
+ #latest-articles .parent1 .card1 .child2{
+    position: relative;
+   padding-top: 40px;
+
+   display: flex;
+   flex-direction: column;
+   gap: 25px;
+ }
+
+
+#latest-articles .parent1 .card1 .child2 img{
+    width: 20px;
+    display: inline-block;
+ }
+
+ #latest-articles .parent1 .card1 .child2 h3{
+    font-size: 20px;
+ }
+  #latest-articles .parent1 .card1 .child2 h5{
+    font-size: 17px;
+    font-weight: 300;
+  }
+
+ #latest-articles  .parent1 .card1 .child2 span{
+    background-color: #FFDF20;
+    border: black 2px solid;
+    box-shadow: 3px 3px 0 black;
+    padding: 5px 5px;
+
+    position: absolute;
+    top: 0;
+    left: 20px;
+
+    transform: rotate(-2deg);
+
+ }
+
+#latest-articles .parent1 .card1 .child2 .items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+#latest-articles .parent1 .card1 .child2 .items >div{
+    display: flex;
+    align-items: center;
+}
+ #latest-articles .parent1 .card1 .child2 .items p{
+    font-size: 12px;
+    margin: 0;
+ }
+
+ #latest-articles .parent1 .card1 .child2 .items .item4 p{
+    color: #E7000B;
+ }
+
+
+   /*========================= card2===================  */
+#latest-articles .container .parent1 .card2{
+    display: flex;
+    align-items: flex-start ;
+    padding: 20px;
+    gap: 5px;
+    border: #000 3px solid;
+    box-shadow: 5px 5px 0 black;
+    
+    transition: transform 0.3s ease;
+  }
+#latest-articles .container .parent1 .card2:hover{
+    transform: translate(-5px, -5px);
+}
+
+#latest-articles .container .parent1 .card2:hover h3{
+    color: #155DFC;
+}
+
+#latest-articles .container .parent1 .card2 h3{
+    color: black;
+    transition: color 0.3s ease;
+}
+
+    /*========================= child1===================  */
+
+        #latest-articles .container .parent1 .card2 .child1{
+        width: 40%;
+        position: relative;
+    } 
+
+    
+   #latest-articles .container .parent1 .card2 .child1 img{
+    width: 100%;
+    display: block;
+    border: black 1px solid;
+   }
+
+    #latest-articles .container .parent1 .card2 .child1 .user{
+        position: relative;
+        
+    }
+
+   #latest-articles .container .parent1 .card2 .child1 span{
+    color: white;
+    background-color: #2B7FFF;
+    border: black 2px solid;
+    position: absolute;
+        top: -10px;
+        right: -10px;
+         transform: rotate(5deg);
+         padding: 5px 5px;
+   }
+
+
+/* ==========================================child2 */
+ #latest-articles .parent1 .card2 .child2{
+    position: relative;
+   padding-top: 40px;
+
+   display: flex;
+   flex-direction: column;
+   gap: 25px;
+ }
+
+
+#latest-articles .parent1 .card2 .child2 img{
+    width: 20px;
+    display: inline-block;
+    /* padding: 50px 25px 25px; */
+ }
+
+ #latest-articles .parent1 .card2 .child2 h3{
+    font-size: 20px;
+ }
+  #latest-articles .parent1 .card2  .child2 h5{
+    font-size: 17px;
+    font-weight: 300;
+  }
+
+ #latest-articles  .parent1 .card2 .child2 span{
+    background-color: #7BF1A8;
+    border: black 2px solid;
+    box-shadow: 3px 3px 0 black;
+    padding: 5px 5px;
+
+    position: absolute;
+    top: 0;
+    left: 20px;
+
+    transform: rotate(-2deg);
+
+ }
+
+#latest-articles .parent1 .card2 .child2 .items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+#latest-articles .parent1 .card2 .child1 .items >div{
+    display: flex;
+    align-items: center;
+}
+ #latest-articles .parent1 .card2 .child2 .items p{
+    font-size: 12px;
+    margin: 0;
+ }
+
+ #latest-articles .parent1 .card2 .child2 .items .item4 p{ 
+       color: #E7000B;
+ }
+
+
+/* =====================================================card3 */
+
+#latest-articles .container .parent1 .card3{
+    display: flex;
+    align-items: flex-start ;
+    padding: 20px;
+    gap: 5px;
+    border: #000 3px solid;
+    box-shadow: 5px 5px 0 black;
+    
+    transition: transform 0.3s ease;
+  }
+#latest-articles .container .parent1 .card3:hover{
+    transform: translate(-5px, -5px);
+}
+
+#latest-articles .container .parent1 .card3:hover h3{
+    color: #9810FA;
+}
+
+#latest-articles .container .parent1 .card3 h3{
+    color: black;
+    transition: color 0.3s ease;
+}
+
+    /*========================= child1===================  */
+
+        #latest-articles .container .parent1 .card3 .child1{
+        width: 40%;
+        position: relative;
+    } 
+
+    
+   #latest-articles .container .parent1 .card3 .child1 img{
+    width: 100%;
+    display: block;
+    border: black 1px solid;
+   }
+
+    #latest-articles .container .parent1 .card3 .child1 .user{
+        position: relative;
+        
+    }
+
+   #latest-articles .container .parent1 .card3 .child1 span{
+    color: white;
+    background-color: #AD46FF;
+    border: black 2px solid;
+    position: absolute;
+        top: -10px;
+        right: -10px;
+         transform: rotate(5deg);
+         padding: 5px 5px;
+   }
+
+
+/* ==========================================child2 */
+ #latest-articles .parent1 .card3 .child2{
+    position: relative;
+   padding-top: 40px;
+
+   display: flex;
+   flex-direction: column;
+   gap: 25px;
+ }
+
+
+#latest-articles .parent1 .card3 .child2 img{
+    width: 20px;
+    display: inline-block;
+    /* padding: 50px 25px 25px; */
+ }
+
+ #latest-articles .parent1 .card3 .child2 h3{
+    font-size: 20px;
+ }
+  #latest-articles .parent1 .card3  .child2 h5{
+    font-size: 17px;
+    font-weight: 300;
+  }
+
+ #latest-articles  .parent1 .card3 .child2 span{
+    background-color: #FDA5D5;
+    border: black 2px solid;
+    box-shadow: 3px 3px 0 black;
+    padding: 5px 5px;
+
+    position: absolute;
+    top: 0;
+    left: 20px;
+
+    transform: rotate(-2deg);
+
+ }
+
+#latest-articles .parent1 .card3 .child2 .items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+#latest-articles .parent1 .card3 .child1 .items >div{
+    display: flex;
+    align-items: center;
+}
+ #latest-articles .parent1 .card3 .child2 .items p{
+    font-size: 12px;
+    margin: 0;
+ }
+
+ #latest-articles .parent1 .card3 .child2 .items .item4 p{ 
+       color: #E7000B;
+ }
+
+/* ===================================final button */
+#latest-articles .parent1 .btn button{
+    background-color: black;
+    color: white;
+    width: 300px;
+    height: 50px;
+
+    content: "";
+    position: absolute;
+
+    left: 5px;
+    top: 5px;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: black;
+
+    z-index: -1;
+}
+
+/* #latest-articles .parent1 .btn button:hover{
+    transform: translate(5px, 5px);
+} */
+
+  /* /* =================end parent1============= */
+
+
+
+  /* <!-- ================start right side================ --> */
+
+  /*  ================================start parent2*/
+#latest-articles .parent2{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    position: sticky;
+    top: 50px;
+
+}
+/* ========================================start box1 */
+#latest-articles .parent2 .box1{
+    width: 100%;
+    border: #000 5px solid;
+    box-shadow: 5px 5px 0 black;
+    align-self: flex-start;
+
+    padding: 30px;
+   
+}
+
+
+#latest-articles .parent2 .box1 .textbox1,
+#latest-articles .parent2 .box1 .textbox2,
+#latest-articles .parent2 .box1 .textbox3{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    box-sizing: border-box;
+    padding: 5px 0;
+    margin-bottom: 30px;
+    
+}
+
+#latest-articles .parent2 .box1 .content1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#latest-articles .parent2 .box1 .info1{
+    display: flex;
+    gap: 20px;
+}
+
+#latest-articles .parent2 .box1 h1{
+    font-weight: 800;
+}
+
+#latest-articles .parent2 .box1 .textbox1 h2{
+    color: #FB2C36;
+    font-size: 40px;
+}
+
+#latest-articles .parent2 .box1 .textbox2 h2{
+ color: #2B7FFF;
+ font-size: 40px;
+}
+
+#latest-articles .parent2 .box1 .textbox3 h2{
+color: #AD46FF;
+font-size: 40px;
+}
+
+#latest-articles .parent2 .box1 .textbox1 h3,
+#latest-articles .parent2 .box1 .textbox2 h3,
+#latest-articles .parent2 .box1 .textbox3 h3{
+    transition: color 0.3s ease;
+}
+#latest-articles .parent2 .box1 .textbox1 h3:hover{
+    color:#FB2C36 ;
+}
+
+#latest-articles .parent2 .box1 .textbox2 h3:hover{
+    color: #2B7FFF;
+}
+
+#latest-articles .parent2 .box1 .textbox3 h3:hover{
+    color: #AD46FF;
+}
+
+
+
+/* ================================ start box2 */
+#latest-articles .parent2 .box2{
+    width: 100%;
+    border: #000 5px solid;
+    box-shadow: 5px 5px 0 black;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#latest-articles .parent2 .box2 .btns{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 0;
+
+}
+
+#latest-articles .parent2 .box2 button{
+    width: 250px;
+    height: 50px;
+    transition: all 0.3s ease;
+    border: #000 3px solid;
+    font-size: 20px;
+    font-weight: 600;
+}
+#latest-articles .parent2 .box2 button:hover{
+    transform: translate(5px, -5px);
+    box-shadow: 5px 5px 0 black;
+}
+#latest-articles .parent2 .box2 .btn1{
+    background-color: #FEF9C2;
+}
+#latest-articles .parent2 .box2 .btn1:hover{
+    background-color: #FFDF20;
+}
+
+#latest-articles .parent2 .box2 .btn2{
+    background-color: #DBFCE7;
+}
+#latest-articles .parent2 .box2 .btn2:hover{
+    background-color: #7BF1A8;
+}
+
+#latest-articles .parent2 .box2 .btn3{
+    background-color: #FCE7F3;
+}
+#latest-articles .parent2 .box2 .btn3:hover{
+    background-color: #FEB9DF;
+}
+
+#latest-articles .parent2 .box2 .btn4{
+    background-color: #DBEAFE;
+}
+#latest-articles .parent2 .box2 .btn4:hover{
+    background-color: #8EC5FF;
+}
+
+#latest-articles .parent2 .box2 .btn5{
+    background-color: #F3E8FF;
+}
+#latest-articles .parent2 .box2 .btn5:hover{
+    background-color: #DAB2FF;
+}
+
+
+/* =================end LATEST ARTICLES================== */
+
+
